@@ -1,13 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import Calculator from '@/components/Calculator';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <ThemeProvider>
+      <div className="min-h-screen flex flex-col bg-background transition-colors duration-300">
+        <header className="p-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold">Scientific Calculator</h1>
+          <ThemeToggle />
+        </header>
+        
+        <main className="flex-1 p-4">
+          <Calculator />
+        </main>
+        
+        <footer className="p-4 text-center text-sm text-muted-foreground">
+          Scientific Calculator © 2025
+        </footer>
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 

@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,30 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				calculator: {
+					display: 'hsl(var(--calculator-display))',
+					'display-text': 'hsl(var(--calculator-display-text))',
+					button: 'hsl(var(--calculator-button))',
+					'button-hover': 'hsl(var(--calculator-button-hover))',
+					'button-active': 'hsl(var(--calculator-button-active))',
+					'button-text': 'hsl(var(--calculator-button-text))',
+					operator: 'hsl(var(--calculator-operator))',
+					'operator-hover': 'hsl(var(--calculator-operator-hover))',
+					'operator-active': 'hsl(var(--calculator-operator-active))',
+					'operator-text': 'hsl(var(--calculator-operator-text))',
+					function: 'hsl(var(--calculator-function))',
+					'function-hover': 'hsl(var(--calculator-function-hover))',
+					'function-active': 'hsl(var(--calculator-function-active))',
+					'function-text': 'hsl(var(--calculator-function-text))',
+					memory: 'hsl(var(--calculator-memory))',
+					'memory-hover': 'hsl(var(--calculator-memory-hover))',
+					'memory-active': 'hsl(var(--calculator-memory-active))',
+					'memory-text': 'hsl(var(--calculator-memory-text))',
+					equals: 'hsl(var(--calculator-equals))',
+					'equals-hover': 'hsl(var(--calculator-equals-hover))',
+					'equals-active': 'hsl(var(--calculator-equals-active))',
+					'equals-text': 'hsl(var(--calculator-equals-text))',
 				}
 			},
 			borderRadius: {
@@ -84,12 +109,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'button-press': {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(0.95)' },
+					'100%': { transform: 'scale(1)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'button-press': 'button-press 0.2s ease-out'
+			},
+			fontFamily: {
+				mono: ['JetBrains Mono', 'monospace'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
